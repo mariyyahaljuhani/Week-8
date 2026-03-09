@@ -1,0 +1,26 @@
+import numpy as np
+
+# Provided matrix
+X = np.array([
+[3.0, 4.0],
+[1.0, 2.0],
+[0.0, 5.0],
+])
+
+# Compute row norms
+row_norms = np.linalg.norm(X, axis=1, keepdims=True)
+
+# Normalize rows using broadcasting
+X_normalized = X / row_norms
+
+# Verify norms
+norms = np.linalg.norm(X_normalized, axis=1)
+
+print("Row norms:")
+print(row_norms)
+
+print("Normalized matrix:")
+print(X_normalized)
+
+print("Norms after normalization:")
+print(norms)

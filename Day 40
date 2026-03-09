@@ -1,0 +1,27 @@
+import numpy as np
+
+# Provided inputs
+X = np.array([
+[1.0, 0.5],
+[2.0, -1.0],
+[0.0, 3.0],
+])
+
+W = np.array([
+[0.2, -0.1, 0.5],
+[0.7, 0.3, -0.2],
+])
+
+b = np.array([0.1, 0.0, -0.3])
+
+# Compute Y
+Y = X @ W + b
+
+# Print shapes
+print("Shape of X:", X.shape)
+print("Shape of W:", W.shape)
+print("Shape of b:", b.shape)
+print("Shape of Y:", Y.shape)
+
+print("Y =")
+print(Y)
